@@ -12,7 +12,7 @@ response = requests.get(URL)
 
 data = response.json()
 # 서울 기온
-temp = data['main']['temp']
+temp5 = data['main']['temp']
 time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 csv_filename = 'seoul_weather.csv'
@@ -30,6 +30,6 @@ with open(csv_filename, 'a', newline='') as file:
     if not file_exist:
         writer.writerow(header)
 
-    writer.writerow([time,temp])
+    writer.writerow([time,temp5])
 
     print('서울 기온 저장 완료')
