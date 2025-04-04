@@ -12,7 +12,7 @@ response = requests.get(URL)
 
 data = response.json()
 # 서울 기온
-temp5 = data['main']['temp']
+temp = data['main']['temp']
 time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 csv_filename = 'seoul_weather.csv'
